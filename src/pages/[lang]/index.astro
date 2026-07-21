@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Icon from '../../components/Icon.astro';
+import Illustration from '../../components/Illustration.astro';
 import { content, LOCALES } from '../../content/i18n.js';
 import { path } from '../../lib/url.js';
 
@@ -11,19 +12,62 @@ export function getStaticPaths() {
 const { lang } = Astro.params;
 const t = content[lang];
 const h = t.home;
+const f = h.facts;
+const linkHref = (l) => (l.hash ? `${path(lang, l.slug)}#${l.hash}` : path(lang, l.slug));
 ---
 <BaseLayout lang={lang} slug="">
+  <!-- Hero: the illustration is the first thing you see -->
   <section class="wrap home-hero">
     <p class="eyebrow">{t.metaDescription.replace(/[—.].*$/, '').trim()}</p>
+    <Illustration src="img/couple.jpg" alt="Rick & Jikke, hand in hand" class="hero-art" eager={true} />
     <h1>{h.title}</h1>
     <p class="names">Rick <span class="amp">&amp;</span> Jikke</p>
     <p class="datechip">{h.date}</p>
     <p class="tagline">“{h.tagline}”</p>
-    <Icon name="toast" class="art" />
     <p class="intro">{h.intro}</p>
     <div class="actions">
       <a class="btn solid" href={path(lang, 'rsvp')}>{t.cta.rsvp}</a>
       <a class="btn ghost" href={path(lang, 'details')}>{t.cta.details}</a>
+    </div>
+  </section>
+
+  <!-- The essentials: everything you need at a glance -->
+  <section class="wrap home-facts">
+    <p class="eyebrow">{h.factsKicker}</p>
+    <div class="facts">
+      <div class="fact">
+        <span class="label">{f.dateLabel}</span>
+        <span class="value">{f.dateValue}</span>
+      </div>
+      <div class="fact">
+        <span class="label">{f.ceremonyLabel}</span>
+        <span class="value">{f.ceremonyVenue}</span>
+        <span class="sub">{f.ceremonyTime}</span>
+      </div>
+      <div class="fact">
+        <span class="label">{f.partyLabel}</span>
+        <span class="value">{f.partyVenue}</span>
+        <span class="sub">{f.partyTime}</span>
+      </div>
+    </div>
+    <div class="transport-note">
+      <p class="fine-italic">{f.invitedNote}</p>
+      <p class="big-line">{f.transport}</p>
+      <p class="contact">{f.contactLead} <a href={`tel:${f.contactTel}`}>{f.contactDisplay}</a></p>
+    </div>
+  </section>
+
+  <!-- Everything else: click through to the deeper stuff -->
+  <section class="wrap home-links">
+    <p class="eyebrow">{h.linksKicker}</p>
+    <div class="links-grid">
+      {h.links.map((l) => (
+        <a class="link-card" href={linkHref(l)}>
+          <Icon name={l.icon} class="link-ico" />
+          <span class="link-label">{l.label}</span>
+          <span class="link-note">{l.note}</span>
+        </a>
+      ))}
     </div>
   </section>
 </BaseLayout>

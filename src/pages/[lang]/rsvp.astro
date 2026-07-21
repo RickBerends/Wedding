@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Illustration from '../../components/Illustration.astro';
 import { content, LOCALES } from '../../content/i18n.js';
 
 export function getStaticPaths() {
@@ -27,6 +28,7 @@ const r = t.rsvp;
       </svg>
       <h1>{r.title}</h1>
       <p class="quote rsvp-intro">{r.intro}</p>
+      <Illustration src="img/ducks.jpg" alt="Two ducks in wedding outfits toasting under a disco ball" class="page-art" />
     </div>
 
     <div class="wrap">
@@ -57,7 +59,7 @@ const r = t.rsvp;
             {r.dietaryLabel}
             <textarea name="dietary" rows="2"></textarea>
           </label>
-          <label>
+          <label id="song">
             {r.songLabel}
             <input type="text" name="song" />
           </label>

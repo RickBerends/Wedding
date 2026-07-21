@@ -1,0 +1,12 @@
+---
+// A framed raster illustration. The drawings have a fixed cream background and can't
+// recolour with `currentColor`, so we present them in a bordered frame that reads as an
+// intentional framed picture on both the paper and midnight themes.
+import { asset } from '../lib/url.js';
+
+interface Props { src: string; alt: string; class?: string; eager?: boolean; }
+const { src, alt, class: className = '', eager = false } = Astro.props;
+---
+<figure class:list={['frame', className]}>
+  <img src={asset(src)} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+</figure>

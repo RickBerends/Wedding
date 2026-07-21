@@ -306,3 +306,62 @@ h1 {
   text-align: center; font-size: .76rem; letter-spacing: .04em; color: var(--ink-soft);
   background: var(--edge); padding: .45rem var(--gutter);
 }
+
+/* keep anchored targets clear of the sticky header */
+[id] { scroll-margin-top: 5rem; }
+
+/* ---- framed raster illustrations ---- */
+/* Fixed light backing so the cream drawings stay legible on the midnight theme too. */
+.frame {
+  margin: 0; background: #F4EEE0; border: 1.5px solid var(--line); border-radius: 16px;
+  padding: clamp(.7rem, 2.6vw, 1.3rem); box-shadow: 5px 6px 0 var(--line);
+}
+.frame img { display: block; width: 100%; height: auto; border-radius: 7px; }
+.home-hero .hero-art { width: min(30rem, 86%); margin: 1.9rem auto 1.4rem; }
+.page-hero .page-art { width: min(22rem, 78%); margin: 1.6rem auto 0; }
+
+/* ---- home: essentials + quick links ---- */
+.home-facts, .home-links { text-align: center; padding-top: clamp(1rem, 3vw, 2.2rem); }
+.home-facts .eyebrow, .home-links .eyebrow { display: block; }
+
+.facts {
+  display: grid; gap: 1.1rem; margin: 1.4rem auto 0; max-width: 52rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 620px) { .facts { grid-template-columns: 1fr; } }
+.fact {
+  background: var(--paper-card); border: 1.5px solid var(--line); border-radius: 14px;
+  padding: 1.15rem 1.2rem 1.3rem; box-shadow: 4px 5px 0 var(--line);
+  display: flex; flex-direction: column; gap: .3rem;
+}
+.fact .label {
+  font-family: var(--f-hand); font-weight: 700; text-transform: uppercase;
+  letter-spacing: .14em; font-size: .72rem; color: var(--ink-soft);
+}
+.fact .value { font-family: var(--f-display); font-weight: 900; text-transform: uppercase; font-size: var(--step-1); line-height: 1.05; }
+.fact .sub { color: var(--ink-soft); font-size: .9rem; }
+
+.transport-note { max-width: 46rem; margin: 1.8rem auto 0; }
+.fine-italic { font-family: var(--f-hand); font-style: italic; font-size: .86rem; color: var(--ink-soft); margin: 0; }
+.transport-note .big-line {
+  font-family: var(--f-display); font-weight: 900; text-transform: uppercase;
+  font-size: var(--step-2); line-height: 1.06; margin: .4rem auto 0; text-wrap: balance; max-width: 22ch;
+}
+.transport-note .contact { margin: 1rem 0 0; }
+.transport-note .contact a { font-weight: 700; text-underline-offset: 3px; }
+
+.links-grid {
+  display: grid; gap: 1rem; margin: 1.4rem auto 0; max-width: 52rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13.5rem), 1fr));
+}
+.link-card {
+  display: flex; flex-direction: column; align-items: center; gap: .45rem; text-align: center;
+  text-decoration: none; color: var(--ink); background: var(--paper-card);
+  border: 1.5px solid var(--line); border-radius: 14px; padding: 1.4rem 1rem;
+  box-shadow: 4px 5px 0 var(--line); transition: transform .12s ease;
+}
+.link-card:hover { transform: translateY(-2px); }
+@media (prefers-reduced-motion: reduce) { .link-card:hover { transform: none; } }
+.link-ico { width: 2.7rem; height: 2.7rem; color: var(--ink); }
+.link-label { font-family: var(--f-display); font-weight: 900; text-transform: uppercase; font-size: var(--step-0); letter-spacing: -.01em; }
+.link-note { font-size: .82rem; color: var(--ink-soft); }

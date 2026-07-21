@@ -3,8 +3,10 @@
 A small, bilingual (English / Nederlands) wedding website in a hand-drawn, cream-paper /
 midnight-disco style. Built with [Astro](https://astro.build) and deployed to GitHub Pages.
 
-> **Status:** content scaffold. Real dates, venue, program and FAQ answers are placeholders
-> (written as `{ DATE }`, `{ VENUE }`, etc.) — fill them in via `src/content/i18n.js`.
+> **Status:** live content in progress. The home page is an at-a-glance hub (hero → the
+> essentials → quick links). Venues and times are real (Hasseltse Kapel 18:30–20:00, Bet Koolen
+> 20:30–01:00, transport between the two, day-of contact). What's still open — exact date, street
+> addresses, dress code / colour theme — stays written as `{ PLACEHOLDERS }` in `src/content/i18n.js`.
 
 ## Structure
 
@@ -13,7 +15,8 @@ src/
   content/i18n.js        all copy, per locale (en / nl) — edit here
   styles/global.css      design tokens + component styles (paper + midnight themes)
   layouts/BaseLayout.astro
-  components/            Header, Footer, PageHero, Icon (line-art SVGs)
+  components/            Header, Footer, Icon (line-art SVGs), Illustration (framed raster art)
+public/img/              couple.jpg, car.jpg, ducks.jpg — the hand-drawn illustrations
   pages/
     index.astro          redirects to /en/
     [lang]/index.astro   home
@@ -50,9 +53,7 @@ file in `public/`, set `site` to the domain and `base` to `'/'`.
 
 ## To do
 
-- Fill in real content in `src/content/i18n.js`.
+- Fill in the remaining `{ PLACEHOLDERS }` in `src/content/i18n.js` (exact date, street
+  addresses, dress code / colour theme, hotel block, story + FAQ answers).
 - Decide the RSVP backend (email link, Google Form, Formspree, or a small handler) and
   wire up the form action in `src/pages/[lang]/rsvp.astro`.
-- Commission or redraw final illustrations. The SVGs in `src/components/Icon.astro` are
-  original placeholders drawn in the reference style — the Pinterest images themselves are
-  not used and should not be shipped.

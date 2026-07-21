@@ -21,7 +21,7 @@ const d = t.details;
   <section class="wrap">
     <div class="cards">
       {d.cards.map((c) => (
-        <article class="card">
+        <article class="card" id={c.id}>
           <span class="label">{c.label}</span>
           <span class="value">{c.value}</span>
           <span class="sub">{c.sub}</span>
@@ -29,8 +29,9 @@ const d = t.details;
       ))}
     </div>
     <div class="callout">
-      <h2>{d.timelineTitle}</h2>
-      <p>{d.timelineNote}</p>
+      <p class="fine-italic">{d.transport.note}</p>
+      <h2>{d.transport.line}</h2>
+      <p>{d.transport.contactLead} <a href={`tel:${d.transport.contactTel}`}>{d.transport.contactDisplay}</a></p>
     </div>
   </section>
 </BaseLayout>
