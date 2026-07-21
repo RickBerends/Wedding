@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
+import { content, LOCALES } from '../../content/i18n.js';
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = content[lang];
+const f = t.faq;
+---
+<BaseLayout lang={lang} slug="faq" title={f.title}>
+  <section class="wrap page-hero">
+    <p class="eyebrow">{t.brand}</p>
+    <Icon name="question" class="art" />
+    <h1>{f.title}</h1>
+    <p class="quote">“{f.quote}”</p>
+  </section>
+  <section class="wrap">
+    <div class="faq">
+      {f.items.map((item, i) => (
+        <details open={i === 0}>
+          <summary>{item.q}</summary>
+          <p>{item.a}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

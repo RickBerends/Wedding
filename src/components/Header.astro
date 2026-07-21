@@ -1,0 +1,37 @@
+---
+import { content, OTHER } from '../content/i18n.js';
+import { path } from '../lib/url.js';
+
+interface Props { lang: string; slug: string; }
+const { lang, slug } = Astro.props;
+const t = content[lang];
+const other = OTHER[lang];
+---
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href={path(lang, '')} aria-label={`${t.brand} — home`}>
+      <span class="mono">R&amp;J</span>
+      <span class="names">{t.brand}</span>
+    </a>
+
+    <input id="nav-toggle" type="checkbox" hidden />
+
+    <nav class="nav" aria-label="Primary">
+      {t.nav.map((item) => (
+        <a
+          href={path(lang, item.slug)}
+          aria-current={item.slug === slug ? 'page' : undefined}
+        >{item.label}</a>
+      ))}
+    </nav>
+
+    <div class="controls">
+      <label class="menu-toggle" for="nav-toggle" aria-label="Menu">≡</label>
+      <a class="lang" href={path(other, slug)} lang={other} hreflang={other}
+         aria-label={`${content[other].brand} — ${content[other].langName}`}>
+        {content[other].langName}
+      </a>
+      <button class="tbtn" id="theme-toggle" type="button" title={t.themeLabel} aria-label={t.themeLabel}>◐</button>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,16 @@
+---
+import { content } from '../content/i18n.js';
+import Icon from './Icon.astro';
+
+interface Props { lang: string; }
+const { lang } = Astro.props;
+const t = content[lang];
+---
+<footer class="site-footer">
+  <div class="wrap">
+    <Icon name="disco" class="art" />
+    <p class="big">{t.footer.big}</p>
+    <p class="sig">{t.footer.sig}</p>
+    <p class="fine">{t.footer.fine}</p>
+  </div>
+</footer>

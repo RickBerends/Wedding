@@ -1,0 +1,17 @@
+{
+  "name": "wedding",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Rick & Jikke — wedding website (bilingual EN/NL, Astro + GitHub Pages)",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "devDependencies": {
+    "astro": "^5.2.5"
+  }
+}

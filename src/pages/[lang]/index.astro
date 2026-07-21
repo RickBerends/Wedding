@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
+import { content, LOCALES } from '../../content/i18n.js';
+import { path } from '../../lib/url.js';
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = content[lang];
+const h = t.home;
+---
+<BaseLayout lang={lang} slug="">
+  <section class="wrap home-hero">
+    <p class="eyebrow">{t.metaDescription.replace(/[—.].*$/, '').trim()}</p>
+    <h1>{h.title}</h1>
+    <p class="names">Rick <span class="amp">&amp;</span> Jikke</p>
+    <p class="datechip">{h.date}</p>
+    <p class="tagline">“{h.tagline}”</p>
+    <Icon name="toast" class="art" />
+    <p class="intro">{h.intro}</p>
+    <div class="actions">
+      <a class="btn solid" href={path(lang, 'rsvp')}>{t.cta.rsvp}</a>
+      <a class="btn ghost" href={path(lang, 'details')}>{t.cta.details}</a>
+    </div>
+  </section>
+</BaseLayout>

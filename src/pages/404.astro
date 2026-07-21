@@ -1,0 +1,36 @@
+---
+import '../styles/global.css';
+import Icon from '../components/Icon.astro';
+import { content, DEFAULT_LOCALE } from '../content/i18n.js';
+import { path } from '../lib/url.js';
+
+const en = content.en;
+const nl = content.nl;
+const home = path(DEFAULT_LOCALE, '');
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 · Rick &amp; Jikke</title>
+    <meta name="robots" content="noindex" />
+    <script is:inline>
+      (function () {
+        try {
+          var s = localStorage.getItem('rj-theme');
+          if (s === 'dark' || s === 'light') document.documentElement.setAttribute('data-theme', s);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <main class="wrap notfound">
+      <Icon name="disco" class="art" />
+      <p class="code">{en.notFound.code}</p>
+      <p class="line">{en.notFound.line}</p>
+      <p class="line" lang="nl" style="font-size:var(--step-1)">{nl.notFound.line}</p>
+      <p><a class="btn ghost" href={home}>{en.cta.back} / {nl.cta.back}</a></p>
+    </main>
+  </body>
+</html>
