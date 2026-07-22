@@ -7,7 +7,7 @@ export const DEFAULT_LOCALE = 'en';
 export const OTHER = { en: 'nl', nl: 'en' };
 
 // Page routes shared across locales. `slug` is '' for the home page.
-export const PAGES = ['', 'story', 'details', 'travel', 'dresscode', 'faq'];
+export const PAGES = ['', 'story', 'details', 'transport', 'stay', 'dresscode', 'faq'];
 
 export const content = {
   en: {
@@ -24,7 +24,8 @@ export const content = {
       { slug: '', label: 'Home' },
       { slug: 'story', label: 'Our story' },
       { slug: 'details', label: 'Details' },
-      { slug: 'travel', label: 'Travel & stay' },
+      { slug: 'transport', label: 'Transport' },
+      { slug: 'stay', label: 'Where to stay' },
       { slug: 'dresscode', label: 'Dresscode' },
       { slug: 'faq', label: 'FAQ' },
     ],
@@ -56,8 +57,8 @@ export const content = {
       },
       linksKicker: 'Everything else',
       links: [
-        { slug: 'travel', hash: 'transport', icon: 'car', label: 'Transport', note: 'Between the two venues' },
-        { slug: 'travel', hash: 'stay', icon: 'bed', label: 'Where to sleep', note: 'Rooms & getting home' },
+        { slug: 'transport', icon: 'car', label: 'Transport', note: 'Getting you there and home again' },
+        { slug: 'stay', icon: 'bed', label: 'Where to sleep', note: 'Rooms for the night' },
         { slug: 'dresscode', icon: 'palette', label: 'Dresscode', note: 'What to wear' },
         { slug: 'story', icon: 'rings', label: 'Our story', note: 'How we got here' },
         { slug: 'faq', icon: 'question', label: 'Good questions', note: 'The things people ask' },
@@ -79,8 +80,8 @@ export const content = {
       quote: 'Loud headline, quiet facts',
       cards: [
         { label: 'When', value: 'Saturday 11/12/2027', sub: 'Ceremony from 18:30' },
-        { label: 'Ceremony', value: 'Hasseltse Kapel', sub: '18:30 – 20:00 · { ADDRESS }' },
-        { label: 'Party', value: 'Bet Koolen', sub: '20:30 – 01:00 · { ADDRESS }' },
+        { label: 'Ceremony', value: 'Hasseltse Kapel', sub: '18:30 – 20:00 · Hasseltplein 7, Tilburg' },
+        { label: 'Party', value: 'Bet Koolen', sub: '20:30 – 01:00 · Broekhovenseweg 111, Tilburg' },
       ],
       transport: {
         note: 'Going to both the ceremony and the party?',
@@ -98,17 +99,49 @@ export const content = {
       note: "{ Dresscode to follow — we're still deciding. Check back a little closer to the day. }",
     },
 
-    travel: {
-      title: 'Transport & stay',
+    transport: {
+      title: 'Transport',
       quote: 'Getting you there and home again',
       blocks: [
         {
-          id: 'transport',
-          h: 'Transport',
-          p: 'We run transport between Hasseltse Kapel (ceremony) and Bet Koolen (party). Hop on if you need it — it’s there for you, not compulsory. { Departure times and pickup spot to follow. }',
+          h: 'Hasseltse Kapel — the ceremony',
+          p: 'Hasseltplein 7, 5042 AB Tilburg.',
+          items: [
+            'Free parking in the streets around the square, plus paid parking in front of the hospital.',
+            'Buses run to the venue — the nearest stop is Hasseltstraat (lines 7, 300 and 301), about a minute’s walk.',
+            'Bikes go in the designated bike parking at the side of the venue.',
+            'Please arrive on time — aim to be seated no later than 18:20.',
+          ],
         },
-        { id: 'stay', h: 'Where to sleep', p: 'A block of rooms is held at { HOTEL NAME }. Mention "{ BOOKING CODE }" for the wedding rate.' },
-        { h: 'Getting there', p: '{ Directions, parking and the nearest station. }' },
+        {
+          h: 'Bet Koolen — the party',
+          p: 'Broekhovenseweg 111, 5021 LC Tilburg.',
+          items: [
+            'Paid parking is available in the area.',
+            'It’s about a 15-minute drive or bike ride from the ceremony.',
+            'The bus won’t get you there in time — but we arrange quick transport for anyone who wants to use it.',
+            'Bikes can be parked { spot to follow }.',
+            'Please don’t park at the Jumbo — their gate closes for the night and you’ll be locked in.',
+          ],
+        },
+        {
+          h: 'Getting home',
+          p: 'Stay safe — please don’t drink and drive.',
+          items: [
+            'Share a taxi.',
+            'Bring a designated driver.',
+            'Book a hotel — see the Where to stay page.',
+          ],
+        },
+      ],
+    },
+
+    stay: {
+      title: 'Where to stay',
+      quote: 'A bed for after the party',
+      blocks: [
+        { h: 'Sleep', p: 'A block of rooms is held at { HOTEL NAME }. Mention "{ BOOKING CODE }" for the wedding rate.' },
+        { h: 'Booking', p: '{ Add the hotel link or phone number here, plus any deadline for the wedding rate. }' },
       ],
     },
 
@@ -151,7 +184,8 @@ export const content = {
       { slug: '', label: 'Home' },
       { slug: 'story', label: 'Ons verhaal' },
       { slug: 'details', label: 'Details' },
-      { slug: 'travel', label: 'Reizen & slapen' },
+      { slug: 'transport', label: 'Vervoer' },
+      { slug: 'stay', label: 'Slapen' },
       { slug: 'dresscode', label: 'Dresscode' },
       { slug: 'faq', label: 'Vragen' },
     ],
@@ -183,8 +217,8 @@ export const content = {
       },
       linksKicker: 'De rest',
       links: [
-        { slug: 'travel', hash: 'transport', icon: 'car', label: 'Vervoer', note: 'Tussen de twee locaties' },
-        { slug: 'travel', hash: 'stay', icon: 'bed', label: 'Slapen', note: 'Kamers & thuiskomen' },
+        { slug: 'transport', icon: 'car', label: 'Vervoer', note: 'Heen, terug en veilig thuis' },
+        { slug: 'stay', icon: 'bed', label: 'Slapen', note: 'Een bed voor de nacht' },
         { slug: 'dresscode', icon: 'palette', label: 'Dresscode', note: 'Wat je aantrekt' },
         { slug: 'story', icon: 'rings', label: 'Ons verhaal', note: 'Hoe we hier kwamen' },
         { slug: 'faq', icon: 'question', label: 'Goeie vragen', note: 'Wat mensen altijd vragen' },
@@ -206,8 +240,8 @@ export const content = {
       quote: 'Luide kop, rustige feiten',
       cards: [
         { label: 'Wanneer', value: 'Zaterdag 11/12/2027', sub: 'Ceremonie vanaf 18:30' },
-        { label: 'Ceremonie', value: 'Hasseltse Kapel', sub: '18:30 – 20:00 · { ADRES }' },
-        { label: 'Feest', value: 'Bet Koolen', sub: '20:30 – 01:00 · { ADRES }' },
+        { label: 'Ceremonie', value: 'Hasseltse Kapel', sub: '18:30 – 20:00 · Hasseltplein 7, Tilburg' },
+        { label: 'Feest', value: 'Bet Koolen', sub: '20:30 – 01:00 · Broekhovenseweg 111, Tilburg' },
       ],
       transport: {
         note: 'Ga je naar de ceremonie én het feest?',
@@ -225,17 +259,49 @@ export const content = {
       note: '{ Dresscode volgt — we zijn er nog over aan het beslissen. Kom later nog eens terug. }',
     },
 
-    travel: {
-      title: 'Vervoer & slapen',
+    transport: {
+      title: 'Vervoer',
       quote: 'Heen, terug en veilig thuis',
       blocks: [
         {
-          id: 'transport',
-          h: 'Vervoer',
-          p: 'Wij regelen vervoer tussen Hasseltse Kapel (ceremonie) en Bet Koolen (feest). Gebruik het als je wil — het is er voor je, verplicht is het niet. { Vertrektijden en opstapplek volgen. }',
+          h: 'Hasseltse Kapel — de ceremonie',
+          p: 'Hasseltplein 7, 5042 AB Tilburg.',
+          items: [
+            'Gratis parkeren in de straten rond het plein, en betaald parkeren voor het ziekenhuis.',
+            'De bus stopt vlak bij de kapel — de dichtstbijzijnde halte is Hasseltstraat (lijn 7, 300 en 301), ongeveer een minuut lopen.',
+            'Fietsen kun je kwijt in de fietsenstalling aan de zijkant van de locatie.',
+            'Kom op tijd — zorg dat je uiterlijk 18:20 zit.',
+          ],
         },
-        { id: 'stay', h: 'Slapen', p: 'We houden kamers vast bij { HOTEL }. Noem "{ BOEKINGSCODE }" voor het bruiloftstarief.' },
-        { h: 'Zo kom je er', p: '{ Route, parkeren en het dichtstbijzijnde station. }' },
+        {
+          h: 'Bet Koolen — het feest',
+          p: 'Broekhovenseweg 111, 5021 LC Tilburg.',
+          items: [
+            'Betaald parkeren is beschikbaar in de buurt.',
+            'Het is ongeveer 15 minuten rijden of fietsen vanaf de ceremonie.',
+            'Met de bus ben je niet op tijd — maar wij regelen snel vervoer voor wie daar gebruik van wil maken.',
+            'Fietsen kun je parkeren { plek volgt nog }.',
+            'Parkeer niet bij de Jumbo — hun hek gaat ’s avonds dicht en dan sta je vast.',
+          ],
+        },
+        {
+          h: 'Veilig thuis',
+          p: 'Kom veilig thuis — rij niet met drank op.',
+          items: [
+            'Deel een taxi.',
+            'Neem een BOB.',
+            'Boek een hotel — zie de pagina Waar te slapen.',
+          ],
+        },
+      ],
+    },
+
+    stay: {
+      title: 'Waar te slapen',
+      quote: 'Een bed voor na het feest',
+      blocks: [
+        { h: 'Slapen', p: 'We houden kamers vast bij { HOTEL }. Noem "{ BOEKINGSCODE }" voor het bruiloftstarief.' },
+        { h: 'Boeken', p: '{ Zet hier de link of het telefoonnummer van het hotel, plus een eventuele deadline voor het tarief. }' },
       ],
     },
 

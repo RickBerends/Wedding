@@ -233,6 +233,9 @@ h1 {
   font-size: var(--step-1); margin: 0 0 .3rem;
 }
 .block p { margin: 0; color: var(--ink); }
+.block-list { margin: .6rem 0 0; padding-left: 1.15rem; display: grid; gap: .4rem; }
+.block-list li { color: var(--ink); padding-left: .15rem; }
+.block-list li::marker { color: var(--ink-soft); }
 
 /* ---- detail cards ---- */
 .cards {

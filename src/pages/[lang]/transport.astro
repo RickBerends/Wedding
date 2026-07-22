@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Illustration from '../../components/Illustration.astro';
+import { content, LOCALES } from '../../content/i18n.js';
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = content[lang];
+const tr = t.transport;
+---
+<BaseLayout lang={lang} slug="transport" title={tr.title}>
+  <section class="wrap page-hero">
+    <p class="eyebrow">{t.brand}</p>
+    <Illustration src="img/car.jpg" alt="Rick & Jikke driving off in a wedding car" class="page-art" />
+    <h1>{tr.title}</h1>
+    <p class="quote">“{tr.quote}”</p>
+  </section>
+  <section class="wrap">
+    <div class="stack">
+      {tr.blocks.map((b) => (
+        <article class="block">
+          <h2>{b.h}</h2>
+          {b.p && <p>{b.p}</p>}
+          {b.items && (
+            <ul class="block-list">
+              {b.items.map((it) => <li>{it}</li>)}
+            </ul>
+          )}
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
