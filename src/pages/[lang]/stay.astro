@@ -14,18 +14,55 @@ const st = t.stay;
 <BaseLayout lang={lang} slug="stay" title={st.title}>
   <section class="wrap page-hero">
     <p class="eyebrow">{t.brand}</p>
-    <Icon name="bed" class="art" />
+    <Icon name="lodge" class="art" />
     <h1>{st.title}</h1>
     <p class="quote">“{st.quote}”</p>
   </section>
   <section class="wrap">
     <div class="stack">
-      {st.blocks.map((b) => (
-        <article class="block">
-          <h2>{b.h}</h2>
-          <p>{b.p}</p>
-        </article>
-      ))}
+      <p class="lead">{st.intro}</p>
+
+      <article class="block">
+        <h2>{st.hotels.h}</h2>
+        <p>{st.hotels.p}</p>
+        <ul class="block-list hotels">
+          {st.hotels.items.map((h) => (
+            <li>
+              <a href={h.url} target="_blank" rel="noopener noreferrer">{h.name}</a>
+            </li>
+          ))}
+        </ul>
+      </article>
+
+      <article class="block">
+        <h2>{st.walk.h}</h2>
+        <p>{st.walk.p}</p>
+      </article>
+
+      <article class="block">
+        <h2>{st.pickup.h}</h2>
+        <p>{st.pickup.p}</p>
+      </article>
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .lead {
+    font-family: var(--f-hand);
+    font-size: var(--step-1);
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+    text-wrap: pretty;
+  }
+  .hotels li { padding-left: .15rem; }
+  .hotels a {
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--ink-soft);
+  }
+  .hotels a:hover { text-decoration-color: var(--ink); }
+</style>

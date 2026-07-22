@@ -138,11 +138,29 @@ export const content = {
 
     stay: {
       title: 'Where to stay',
-      quote: 'A bed for after the party',
-      blocks: [
-        { h: 'Sleep', p: 'A block of rooms is held at { HOTEL NAME }. Mention "{ BOOKING CODE }" for the wedding rate.' },
-        { h: 'Booking', p: '{ Add the hotel link or phone number here, plus any deadline for the wedding rate. }' },
-      ],
+      quote: 'Somewhere to rest those dancing feet',
+      intro:
+        'Normally everyone is always welcome to stay with us — but for our big day we kindly ask you to arrange your own accommodation.',
+      hotels: {
+        h: 'A few places nearby',
+        p: 'Some options in and around Tilburg, in no particular order:',
+        items: [
+          { name: 'Stadsslaperij B&B', url: 'https://destadsslaperij.nl' },
+          { name: 'Villa la Vida', url: 'https://villa-la-vida.nl' },
+          { name: 'Bastion Hotel Tilburg', url: 'https://www.bastionhotels.com/en-gb/hotels/hotel-tilburg' },
+          { name: 'Van der Valk Hotel Tilburg', url: 'https://www.valkhoteltilburg.com' },
+          { name: 'Mercure Hotel Tilburg Centrum', url: 'https://mercure-tilburg.nl/en/' },
+          { name: 'City Hotel Tilburg', url: 'https://www.cityhoteltilburg.nl' },
+        ],
+      },
+      walk: {
+        h: 'Getting back to your room',
+        p: 'Depending on your love for a tipsy walk, some hotels are within walking distance — please check what fits your preferences before booking. Otherwise we recommend booking a taxi or asking your hotel to arrange one.',
+      },
+      pickup: {
+        h: 'Till the end of the night',
+        p: 'We would love to have you with us until the very end. If you are arranging transport, 01:00 – 01:15 would be the ideal window for pick-up.',
+      },
     },
 
     faq: {
@@ -298,11 +316,29 @@ export const content = {
 
     stay: {
       title: 'Waar te slapen',
-      quote: 'Een bed voor na het feest',
-      blocks: [
-        { h: 'Slapen', p: 'We houden kamers vast bij { HOTEL }. Noem "{ BOEKINGSCODE }" voor het bruiloftstarief.' },
-        { h: 'Boeken', p: '{ Zet hier de link of het telefoonnummer van het hotel, plus een eventuele deadline voor het tarief. }' },
-      ],
+      quote: 'Even bijkomen na het dansen',
+      intro:
+        'Normaal ben je altijd welkom om bij ons te blijven slapen — maar voor onze grote dag vragen we jullie vriendelijk om zelf een overnachting te regelen.',
+      hotels: {
+        h: 'Een paar plekken in de buurt',
+        p: 'Wat opties in en rond Tilburg, in willekeurige volgorde:',
+        items: [
+          { name: 'Stadsslaperij B&B', url: 'https://destadsslaperij.nl' },
+          { name: 'Villa la Vida', url: 'https://villa-la-vida.nl' },
+          { name: 'Bastion Hotel Tilburg', url: 'https://www.bastionhotels.com/en-gb/hotels/hotel-tilburg' },
+          { name: 'Van der Valk Hotel Tilburg', url: 'https://www.valkhoteltilburg.com' },
+          { name: 'Mercure Hotel Tilburg Centrum', url: 'https://mercure-tilburg.nl/en/' },
+          { name: 'City Hotel Tilburg', url: 'https://www.cityhoteltilburg.nl' },
+        ],
+      },
+      walk: {
+        h: 'Terug naar je kamer',
+        p: 'Afhankelijk van je liefde voor een aangeschoten wandeling liggen sommige hotels op loopafstand — check vóór het boeken even wat bij je past. Anders raden we aan een taxi te boeken of je hotel er een te laten regelen.',
+      },
+      pickup: {
+        h: 'Tot het einde van de nacht',
+        p: 'We hebben jullie het liefst tot het allerlaatste moment bij ons. Regel je vervoer? Dan is 01:00 – 01:15 het ideale moment om opgehaald te worden.',
+      },
     },
 
     faq: {
