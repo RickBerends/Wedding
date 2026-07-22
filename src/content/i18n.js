@@ -46,7 +46,7 @@ export const content = {
         ceremonyVenue: 'Hasseltse Kapel',
         ceremonyTime: '18:30 – 20:00',
         partyLabel: 'Party',
-        partyVenue: 'Bet Koolen',
+        partyVenue: 'Bet Kolen',
         partyTime: '20:30 – 01:00',
         invitedNote: 'Going to both the ceremony and the party?',
         transport: 'We arrange transport between the two venues — hop on if you need it.',
@@ -81,11 +81,11 @@ export const content = {
       cards: [
         { label: 'When', value: 'Saturday 11/12/2027', sub: 'Ceremony from 18:30' },
         { label: 'Ceremony', value: 'Hasseltse Kapel', sub: '18:30 – 20:00 · Hasseltplein 7, Tilburg' },
-        { label: 'Party', value: 'Bet Koolen', sub: '20:30 – 01:00 · Broekhovenseweg 111, Tilburg' },
+        { label: 'Party', value: 'Bet Kolen', sub: '20:30 – 01:00 · Broekhovenseweg 111, Tilburg' },
       ],
       transport: {
         note: 'Going to both the ceremony and the party?',
-        line: 'We arrange transport between Hasseltse Kapel and Bet Koolen — hop on if you need it.',
+        line: 'We arrange transport between Hasseltse Kapel and Bet Kolen — hop on if you need it.',
         contactLead: 'Something up on the day?',
         contactCall: 'Call Rick on',
         contactTel: '+31637403994',
@@ -114,7 +114,7 @@ export const content = {
           ],
         },
         {
-          h: 'Bet Koolen — the party',
+          h: 'Bet Kolen — the party',
           p: 'Broekhovenseweg 111, 5021 LC Tilburg.',
           items: [
             'Paid parking is available in the area.',
@@ -152,7 +152,7 @@ export const content = {
         { q: 'Can I bring a plus-one?', a: '{ Your plus-one policy in one clear line. }' },
         { q: 'Are kids welcome?', a: '{ The kids answer — adults-only, or bring the whole crew. }' },
         { q: 'What time should I actually arrive?', a: 'Ceremony starts 18:30 at Hasseltse Kapel — aim to be seated by 18:20.' },
-        { q: 'How do I get to the party?', a: 'The party is at Bet Koolen from 20:30. We arrange transport between the two venues — use it if you need it.' },
+        { q: 'How do I get to the party?', a: 'The party is at Bet Kolen from 20:30. We arrange transport between the two venues — use it if you need it.' },
         { q: 'Gifts?', a: '{ Registry, honeymoon fund, or "just come and dance". }' },
         { q: 'When does it end?', a: 'We dance until 01:00. Kiss us at midnight and then { the real answer }.' },
       ],
@@ -206,7 +206,7 @@ export const content = {
         ceremonyVenue: 'Hasseltse Kapel',
         ceremonyTime: '18:30 – 20:00',
         partyLabel: 'Feest',
-        partyVenue: 'Bet Koolen',
+        partyVenue: 'Bet Kolen',
         partyTime: '20:30 – 01:00',
         invitedNote: 'Ga je naar de ceremonie én het feest?',
         transport: 'Wij regelen vervoer tussen de twee locaties — stap in als je het nodig hebt.',
@@ -241,11 +241,11 @@ export const content = {
       cards: [
         { label: 'Wanneer', value: 'Zaterdag 11/12/2027', sub: 'Ceremonie vanaf 18:30' },
         { label: 'Ceremonie', value: 'Hasseltse Kapel', sub: '18:30 – 20:00 · Hasseltplein 7, Tilburg' },
-        { label: 'Feest', value: 'Bet Koolen', sub: '20:30 – 01:00 · Broekhovenseweg 111, Tilburg' },
+        { label: 'Feest', value: 'Bet Kolen', sub: '20:30 – 01:00 · Broekhovenseweg 111, Tilburg' },
       ],
       transport: {
         note: 'Ga je naar de ceremonie én het feest?',
-        line: 'Wij regelen vervoer tussen Hasseltse Kapel en Bet Koolen — stap in als je het nodig hebt.',
+        line: 'Wij regelen vervoer tussen Hasseltse Kapel en Bet Kolen — stap in als je het nodig hebt.',
         contactLead: 'Iets aan de hand op de dag zelf?',
         contactCall: 'Bel Rick op',
         contactTel: '+31637403994',
@@ -274,7 +274,7 @@ export const content = {
           ],
         },
         {
-          h: 'Bet Koolen — het feest',
+          h: 'Bet Kolen — het feest',
           p: 'Broekhovenseweg 111, 5021 LC Tilburg.',
           items: [
             'Betaald parkeren is beschikbaar in de buurt.',
@@ -312,7 +312,7 @@ export const content = {
         { q: 'Mag ik iemand meenemen?', a: '{ Je introducé-beleid in één duidelijke zin. }' },
         { q: 'Zijn kinderen welkom?', a: '{ Het kinderen-antwoord — alleen volwassenen, of neem de hele meute mee. }' },
         { q: 'Hoe laat moet ik er echt zijn?', a: 'De ceremonie begint om 18:30 in de Hasseltse Kapel — zorg dat je rond 18:20 zit.' },
-        { q: 'Hoe kom ik bij het feest?', a: 'Het feest is bij Bet Koolen vanaf 20:30. Wij regelen vervoer tussen de twee locaties — gebruik het als je het nodig hebt.' },
+        { q: 'Hoe kom ik bij het feest?', a: 'Het feest is bij Bet Kolen vanaf 20:30. Wij regelen vervoer tussen de twee locaties — gebruik het als je het nodig hebt.' },
         { q: 'Cadeaus?', a: '{ Verlanglijst, huwelijksreisfonds, of "kom gewoon dansen". }' },
         { q: 'Tot hoe laat duurt het?', a: 'We dansen tot 01:00. Kus ons om middernacht en daarna { het echte antwoord }.' },
       ],
