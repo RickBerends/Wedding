@@ -23,7 +23,6 @@ const linkHref = (l) => (l.hash ? `${path(lang, l.slug)}#${l.hash}` : path(lang,
     <h1>{h.title}</h1>
     <p class="names">Rick <span class="amp">&amp;</span> Jikke</p>
     <p class="datechip">{h.date}</p>
-    <p class="tagline">“{h.tagline}”</p>
     <p class="intro">{h.intro}</p>
     <div class="actions">
       <a class="btn solid" href={path(lang, 'rsvp')}>{t.cta.rsvp}</a>

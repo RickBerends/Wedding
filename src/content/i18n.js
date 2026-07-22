@@ -15,7 +15,7 @@ export const content = {
     langName: 'EN',
     otherLangName: 'NL',
     brand: 'Rick & Jikke',
-    metaDescription: "Rick & Jikke are getting married — two less fish in the sea.",
+    metaDescription: 'Rick & Jikke are getting married.',
     themeLabel: 'Toggle paper / midnight',
     skip: 'Skip to content',
     placeholderNote:
@@ -32,21 +32,20 @@ export const content = {
 
     home: {
       title: "We're getting married",
-      date: '{ DATE }',
-      tagline: 'Two less fish in the sea',
+      date: 'Saturday 11/12/2027',
       intro:
         'Everything you need is right here — the where, the when, and how to get between the two. Scroll on for the fun stuff.',
       factsKicker: 'The essentials',
       facts: {
         dateLabel: 'Date',
-        dateValue: '{ DATE }',
+        dateValue: 'Saturday 11/12/2027',
         ceremonyLabel: 'Ceremony',
         ceremonyVenue: 'Hasseltse Kapel',
         ceremonyTime: '18:30 – 20:00',
         partyLabel: 'Party',
         partyVenue: 'Bet Koolen',
         partyTime: '20:30 – 01:00',
-        invitedNote: "(if you're invited to both)",
+        invitedNote: 'Going to both the ceremony and the party?',
         transport: 'We arrange transport between the two venues — hop on if you need it.',
         contactLead: 'Something up on the day? Call Rick on',
         contactTel: '+31637403994',
@@ -54,8 +53,7 @@ export const content = {
       },
       linksKicker: 'Everything else',
       links: [
-        { slug: 'travel', hash: 'transport', icon: 'car', label: 'Transport', note: 'Between the two venues' },
-        { slug: 'travel', hash: 'stay', icon: 'bed', label: 'Where to sleep', note: 'Rooms & getting home' },
+        { slug: 'travel', icon: 'car', label: 'Travel & stay', note: 'Getting you there and home again' },
         { slug: 'details', hash: 'dress', icon: 'palette', label: 'Dress & colours', note: 'The look of the day' },
         { slug: 'rsvp', hash: 'song', icon: 'note', label: 'Request a song', note: 'Get us on the floor' },
         { slug: 'story', icon: 'rings', label: 'Our story', note: 'How we got here' },
@@ -77,13 +75,13 @@ export const content = {
       title: 'The details',
       quote: 'Loud headline, quiet facts',
       cards: [
-        { label: 'When', value: '{ DAY, DATE }', sub: 'Ceremony from 18:30' },
+        { label: 'When', value: 'Saturday 11/12/2027', sub: 'Ceremony from 18:30' },
         { label: 'Ceremony', value: 'Hasseltse Kapel', sub: '18:30 – 20:00 · { ADDRESS }' },
         { label: 'Party', value: 'Bet Koolen', sub: '20:30 – 01:00 · { ADDRESS }' },
         { label: 'Dress code', value: '{ To follow }', sub: 'Colour theme still in the works', id: 'dress' },
       ],
       transport: {
-        note: "(if you're invited to both)",
+        note: 'Going to both the ceremony and the party?',
         line: 'We arrange transport between Hasseltse Kapel and Bet Koolen — hop on if you need it.',
         contactLead: 'Something up on the day? Call Rick on',
         contactTel: '+31637403994',
@@ -116,7 +114,7 @@ export const content = {
       guestsLabel: 'Number of guests',
       dietaryLabel: 'Dietary notes',
       songLabel: 'A song that gets you on the floor',
-      deadline: 'RSVP by { DATE } — regrets last forever.',
+      deadline: 'RSVP by { RSVP DEADLINE } — regrets last forever.',
       submit: 'Send it',
       backendNote: 'Heads up: the form still needs wiring to a real inbox before it can send.',
     },
@@ -136,7 +134,7 @@ export const content = {
 
     footer: {
       big: "We can't wait to celebrate with you",
-      sig: 'Rick & Jikke · { DATE }',
+      sig: 'Rick & Jikke · 11/12/2027',
       fine: 'Made with love. Details to follow.',
     },
 
@@ -151,7 +149,7 @@ export const content = {
     langName: 'NL',
     otherLangName: 'EN',
     brand: 'Rick & Jikke',
-    metaDescription: 'Rick & Jikke gaan trouwen — twee vissen minder in de zee.',
+    metaDescription: 'Rick & Jikke gaan trouwen.',
     themeLabel: 'Wissel papier / midnight',
     skip: 'Naar de inhoud',
     placeholderNote:
@@ -168,21 +166,20 @@ export const content = {
 
     home: {
       title: 'We gaan trouwen',
-      date: '{ DATUM }',
-      tagline: 'Twee vissen minder in de zee',
+      date: 'Zaterdag 11/12/2027',
       intro:
         'Alles wat je nodig hebt staat hier — waar, wanneer en hoe je tussen de twee komt. Scroll door voor de leuke dingen.',
       factsKicker: 'Het belangrijkste',
       facts: {
         dateLabel: 'Datum',
-        dateValue: '{ DATUM }',
+        dateValue: 'Zaterdag 11/12/2027',
         ceremonyLabel: 'Ceremonie',
         ceremonyVenue: 'Hasseltse Kapel',
         ceremonyTime: '18:30 – 20:00',
         partyLabel: 'Feest',
         partyVenue: 'Bet Koolen',
         partyTime: '20:30 – 01:00',
-        invitedNote: '(als je voor beide bent uitgenodigd)',
+        invitedNote: 'Ga je naar de ceremonie én het feest?',
         transport: 'Wij regelen vervoer tussen de twee locaties — stap in als je het nodig hebt.',
         contactLead: 'Iets aan de hand op de dag zelf? Bel Rick op',
         contactTel: '+31637403994',
@@ -190,8 +187,7 @@ export const content = {
       },
       linksKicker: 'De rest',
       links: [
-        { slug: 'travel', hash: 'transport', icon: 'car', label: 'Vervoer', note: 'Tussen de twee locaties' },
-        { slug: 'travel', hash: 'stay', icon: 'bed', label: 'Slapen', note: 'Kamers & thuiskomen' },
+        { slug: 'travel', icon: 'car', label: 'Reizen & slapen', note: 'Heen, terug en veilig thuis' },
         { slug: 'details', hash: 'dress', icon: 'palette', label: 'Kleding & kleuren', note: 'De look van de dag' },
         { slug: 'rsvp', hash: 'song', icon: 'note', label: 'Verzoeknummer', note: 'Krijg ons op de dansvloer' },
         { slug: 'story', icon: 'rings', label: 'Ons verhaal', note: 'Hoe we hier kwamen' },
@@ -213,13 +209,13 @@ export const content = {
       title: 'De details',
       quote: 'Luide kop, rustige feiten',
       cards: [
-        { label: 'Wanneer', value: '{ DAG, DATUM }', sub: 'Ceremonie vanaf 18:30' },
+        { label: 'Wanneer', value: 'Zaterdag 11/12/2027', sub: 'Ceremonie vanaf 18:30' },
         { label: 'Ceremonie', value: 'Hasseltse Kapel', sub: '18:30 – 20:00 · { ADRES }' },
         { label: 'Feest', value: 'Bet Koolen', sub: '20:30 – 01:00 · { ADRES }' },
         { label: 'Dresscode', value: '{ Volgt }', sub: 'Kleurenthema is nog in de maak', id: 'dress' },
       ],
       transport: {
-        note: '(als je voor beide bent uitgenodigd)',
+        note: 'Ga je naar de ceremonie én het feest?',
         line: 'Wij regelen vervoer tussen Hasseltse Kapel en Bet Koolen — stap in als je het nodig hebt.',
         contactLead: 'Iets aan de hand op de dag zelf? Bel Rick op',
         contactTel: '+31637403994',
@@ -252,7 +248,7 @@ export const content = {
       guestsLabel: 'Aantal gasten',
       dietaryLabel: 'Dieetwensen',
       songLabel: 'Een nummer waarop jij de dansvloer op moet',
-      deadline: 'Reageer vóór { DATUM } — afzeggen kan achteraf niet meer.',
+      deadline: 'Reageer vóór { DEADLINE } — afzeggen kan achteraf niet meer.',
       submit: 'Versturen',
       backendNote: 'Let op: het formulier moet nog gekoppeld worden aan een echte inbox voordat het kan versturen.',
     },
@@ -272,7 +268,7 @@ export const content = {
 
     footer: {
       big: 'We kunnen niet wachten om het met jullie te vieren',
-      sig: 'Rick & Jikke · { DATUM }',
+      sig: 'Rick & Jikke · 11/12/2027',
       fine: 'Met liefde gemaakt. Details volgen.',
     },
 

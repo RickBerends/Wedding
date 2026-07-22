@@ -118,8 +118,8 @@ img, svg { max-width: 100%; }
 .mono {
   display: grid; place-items: center; width: 2.4rem; height: 2.4rem;
   border: 1.5px solid var(--line); border-radius: 50%;
-  font-family: var(--f-display); font-weight: 900; font-size: .95rem; letter-spacing: -.02em;
 }
+.brand-mark { width: 1.55rem; height: 1.55rem; color: var(--ink); }
 .brand .names { font-family: var(--f-hand); font-weight: 700; letter-spacing: .02em; font-size: .9rem; }
 
 .nav { display: flex; align-items: center; gap: .2rem; flex-wrap: wrap; }
