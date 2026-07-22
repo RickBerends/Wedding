@@ -31,7 +31,7 @@ const d = t.details;
     <div class="callout">
       <p class="fine-italic">{d.transport.note}</p>
       <h2>{d.transport.line}</h2>
-      <p>{d.transport.contactLead} <a href={`tel:${d.transport.contactTel}`}>{d.transport.contactDisplay}</a></p>
+      <p>{d.transport.contactLead}<span class="call-line">{d.transport.contactCall} <a href={`tel:${d.transport.contactTel}`}>{d.transport.contactDisplay}</a></span></p>
     </div>
   </section>
 </BaseLayout>

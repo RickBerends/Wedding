@@ -18,15 +18,17 @@ const linkHref = (l) => (l.hash ? `${path(lang, l.slug)}#${l.hash}` : path(lang,
 <BaseLayout lang={lang} slug="">
   <!-- Hero: the illustration is the first thing you see -->
   <section class="wrap home-hero">
-    <p class="eyebrow">{t.metaDescription.replace(/[—.].*$/, '').trim()}</p>
+    <p class="eyebrow">{h.kicker}</p>
     <Illustration src="img/couple.jpg" alt="Rick & Jikke, hand in hand" class="hero-art" eager={true} />
     <h1>{h.title}</h1>
     <p class="names">Rick <span class="amp">&amp;</span> Jikke</p>
-    <p class="datechip">{h.date}</p>
+    <p class="datechip datechip-stack">
+      <span class="dow">{h.dateDow}</span>
+      <span class="dd">{h.dateNum}</span>
+    </p>
     <p class="intro">{h.intro}</p>
     <div class="actions">
-      <a class="btn solid" href={path(lang, 'rsvp')}>{t.cta.rsvp}</a>
-      <a class="btn ghost" href={path(lang, 'details')}>{t.cta.details}</a>
+      <a class="btn solid" href={path(lang, 'details')}>{t.cta.details}</a>
     </div>
   </section>
 
@@ -52,7 +54,7 @@ const linkHref = (l) => (l.hash ? `${path(lang, l.slug)}#${l.hash}` : path(lang,
     <div class="transport-note">
       <p class="fine-italic">{f.invitedNote}</p>
       <p class="big-line">{f.transport}</p>
-      <p class="contact">{f.contactLead} <a href={`tel:${f.contactTel}`}>{f.contactDisplay}</a></p>
+      <p class="contact">{f.contactLead}<span class="call-line">{f.contactCall} <a href={`tel:${f.contactTel}`}>{f.contactDisplay}</a></span></p>
     </div>
   </section>
 

@@ -7,7 +7,7 @@ export const DEFAULT_LOCALE = 'en';
 export const OTHER = { en: 'nl', nl: 'en' };
 
 // Page routes shared across locales. `slug` is '' for the home page.
-export const PAGES = ['', 'story', 'details', 'travel', 'rsvp', 'faq'];
+export const PAGES = ['', 'story', 'details', 'travel', 'dresscode', 'faq'];
 
 export const content = {
   en: {
@@ -25,14 +25,16 @@ export const content = {
       { slug: 'story', label: 'Our story' },
       { slug: 'details', label: 'Details' },
       { slug: 'travel', label: 'Travel & stay' },
-      { slug: 'rsvp', label: 'RSVP' },
+      { slug: 'dresscode', label: 'Dresscode' },
       { slug: 'faq', label: 'FAQ' },
     ],
-    cta: { rsvp: 'RSVP', details: 'The details', back: 'Back home' },
+    cta: { details: 'The details', back: 'Back home' },
 
     home: {
+      kicker: "Here's to forever",
       title: "We're getting married",
-      date: 'Saturday 11/12/2027',
+      dateDow: 'Saturday',
+      dateNum: '11/12/2027',
       intro:
         'Everything you need is right here — the where, the when, and how to get between the two. Scroll on for the fun stuff.',
       factsKicker: 'The essentials',
@@ -47,15 +49,16 @@ export const content = {
         partyTime: '20:30 – 01:00',
         invitedNote: 'Going to both the ceremony and the party?',
         transport: 'We arrange transport between the two venues — hop on if you need it.',
-        contactLead: 'Something up on the day? Call Rick on',
+        contactLead: 'Something up on the day?',
+        contactCall: 'Call Rick on',
         contactTel: '+31637403994',
         contactDisplay: '+31 6 37403994',
       },
       linksKicker: 'Everything else',
       links: [
-        { slug: 'travel', icon: 'car', label: 'Travel & stay', note: 'Getting you there and home again' },
-        { slug: 'details', hash: 'dress', icon: 'palette', label: 'Dress & colours', note: 'The look of the day' },
-        { slug: 'rsvp', hash: 'song', icon: 'note', label: 'Request a song', note: 'Get us on the floor' },
+        { slug: 'travel', hash: 'transport', icon: 'car', label: 'Transport', note: 'Between the two venues' },
+        { slug: 'travel', hash: 'stay', icon: 'bed', label: 'Where to sleep', note: 'Rooms & getting home' },
+        { slug: 'dresscode', icon: 'palette', label: 'Dresscode', note: 'What to wear' },
         { slug: 'story', icon: 'rings', label: 'Our story', note: 'How we got here' },
         { slug: 'faq', icon: 'question', label: 'Good questions', note: 'The things people ask' },
       ],
@@ -78,15 +81,21 @@ export const content = {
         { label: 'When', value: 'Saturday 11/12/2027', sub: 'Ceremony from 18:30' },
         { label: 'Ceremony', value: 'Hasseltse Kapel', sub: '18:30 – 20:00 · { ADDRESS }' },
         { label: 'Party', value: 'Bet Koolen', sub: '20:30 – 01:00 · { ADDRESS }' },
-        { label: 'Dress code', value: '{ To follow }', sub: 'Colour theme still in the works', id: 'dress' },
       ],
       transport: {
         note: 'Going to both the ceremony and the party?',
         line: 'We arrange transport between Hasseltse Kapel and Bet Koolen — hop on if you need it.',
-        contactLead: 'Something up on the day? Call Rick on',
+        contactLead: 'Something up on the day?',
+        contactCall: 'Call Rick on',
         contactTel: '+31637403994',
         contactDisplay: '+31 6 37403994',
       },
+    },
+
+    dresscode: {
+      title: 'Dresscode',
+      quote: 'What to wear',
+      note: "{ Dresscode to follow — we're still deciding. Check back a little closer to the day. }",
     },
 
     travel: {
@@ -101,22 +110,6 @@ export const content = {
         { id: 'stay', h: 'Where to sleep', p: 'A block of rooms is held at { HOTEL NAME }. Mention "{ BOOKING CODE }" for the wedding rate.' },
         { h: 'Getting there', p: '{ Directions, parking and the nearest station. }' },
       ],
-    },
-
-    rsvp: {
-      title: 'Party on!',
-      intro: 'Let us know if you can make it. It genuinely helps us plan the good stuff.',
-      nameLabel: 'M',
-      options: [
-        { value: 'yes', label: "Yes, I'm RSVP-ing like a champ" },
-        { value: 'no', label: 'No, my sofa wins this round' },
-      ],
-      guestsLabel: 'Number of guests',
-      dietaryLabel: 'Dietary notes',
-      songLabel: 'A song that gets you on the floor',
-      deadline: 'RSVP by { RSVP DEADLINE } — regrets last forever.',
-      submit: 'Send it',
-      backendNote: 'Heads up: the form still needs wiring to a real inbox before it can send.',
     },
 
     faq: {
@@ -159,14 +152,16 @@ export const content = {
       { slug: 'story', label: 'Ons verhaal' },
       { slug: 'details', label: 'Details' },
       { slug: 'travel', label: 'Reizen & slapen' },
-      { slug: 'rsvp', label: 'RSVP' },
+      { slug: 'dresscode', label: 'Dresscode' },
       { slug: 'faq', label: 'Vragen' },
     ],
-    cta: { rsvp: 'RSVP', details: 'De details', back: 'Terug naar home' },
+    cta: { details: 'De details', back: 'Terug naar home' },
 
     home: {
+      kicker: 'Voor altijd',
       title: 'We gaan trouwen',
-      date: 'Zaterdag 11/12/2027',
+      dateDow: 'Zaterdag',
+      dateNum: '11/12/2027',
       intro:
         'Alles wat je nodig hebt staat hier — waar, wanneer en hoe je tussen de twee komt. Scroll door voor de leuke dingen.',
       factsKicker: 'Het belangrijkste',
@@ -181,15 +176,16 @@ export const content = {
         partyTime: '20:30 – 01:00',
         invitedNote: 'Ga je naar de ceremonie én het feest?',
         transport: 'Wij regelen vervoer tussen de twee locaties — stap in als je het nodig hebt.',
-        contactLead: 'Iets aan de hand op de dag zelf? Bel Rick op',
+        contactLead: 'Iets aan de hand op de dag zelf?',
+        contactCall: 'Bel Rick op',
         contactTel: '+31637403994',
         contactDisplay: '+31 6 37403994',
       },
       linksKicker: 'De rest',
       links: [
-        { slug: 'travel', icon: 'car', label: 'Reizen & slapen', note: 'Heen, terug en veilig thuis' },
-        { slug: 'details', hash: 'dress', icon: 'palette', label: 'Kleding & kleuren', note: 'De look van de dag' },
-        { slug: 'rsvp', hash: 'song', icon: 'note', label: 'Verzoeknummer', note: 'Krijg ons op de dansvloer' },
+        { slug: 'travel', hash: 'transport', icon: 'car', label: 'Vervoer', note: 'Tussen de twee locaties' },
+        { slug: 'travel', hash: 'stay', icon: 'bed', label: 'Slapen', note: 'Kamers & thuiskomen' },
+        { slug: 'dresscode', icon: 'palette', label: 'Dresscode', note: 'Wat je aantrekt' },
         { slug: 'story', icon: 'rings', label: 'Ons verhaal', note: 'Hoe we hier kwamen' },
         { slug: 'faq', icon: 'question', label: 'Goeie vragen', note: 'Wat mensen altijd vragen' },
       ],
@@ -212,15 +208,21 @@ export const content = {
         { label: 'Wanneer', value: 'Zaterdag 11/12/2027', sub: 'Ceremonie vanaf 18:30' },
         { label: 'Ceremonie', value: 'Hasseltse Kapel', sub: '18:30 – 20:00 · { ADRES }' },
         { label: 'Feest', value: 'Bet Koolen', sub: '20:30 – 01:00 · { ADRES }' },
-        { label: 'Dresscode', value: '{ Volgt }', sub: 'Kleurenthema is nog in de maak', id: 'dress' },
       ],
       transport: {
         note: 'Ga je naar de ceremonie én het feest?',
         line: 'Wij regelen vervoer tussen Hasseltse Kapel en Bet Koolen — stap in als je het nodig hebt.',
-        contactLead: 'Iets aan de hand op de dag zelf? Bel Rick op',
+        contactLead: 'Iets aan de hand op de dag zelf?',
+        contactCall: 'Bel Rick op',
         contactTel: '+31637403994',
         contactDisplay: '+31 6 37403994',
       },
+    },
+
+    dresscode: {
+      title: 'Dresscode',
+      quote: 'Wat je aantrekt',
+      note: '{ Dresscode volgt — we zijn er nog over aan het beslissen. Kom later nog eens terug. }',
     },
 
     travel: {
@@ -235,22 +237,6 @@ export const content = {
         { id: 'stay', h: 'Slapen', p: 'We houden kamers vast bij { HOTEL }. Noem "{ BOEKINGSCODE }" voor het bruiloftstarief.' },
         { h: 'Zo kom je er', p: '{ Route, parkeren en het dichtstbijzijnde station. }' },
       ],
-    },
-
-    rsvp: {
-      title: 'Feesten maar!',
-      intro: 'Laat je ons weten of je erbij bent? Dat helpt ons enorm met de leuke dingen regelen.',
-      nameLabel: 'M',
-      options: [
-        { value: 'yes', label: 'Ja, ik kom als een kampioen' },
-        { value: 'no', label: 'Nee, mijn bank wint deze ronde' },
-      ],
-      guestsLabel: 'Aantal gasten',
-      dietaryLabel: 'Dieetwensen',
-      songLabel: 'Een nummer waarop jij de dansvloer op moet',
-      deadline: 'Reageer vóór { DEADLINE } — afzeggen kan achteraf niet meer.',
-      submit: 'Versturen',
-      backendNote: 'Let op: het formulier moet nog gekoppeld worden aan een echte inbox voordat het kan versturen.',
     },
 
     faq: {

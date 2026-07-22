@@ -1,7 +1,6 @@
 ---
 import { content, OTHER } from '../content/i18n.js';
-import { path } from '../lib/url.js';
-import Icon from './Icon.astro';
+import { path, asset } from '../lib/url.js';
 
 interface Props { lang: string; slug: string; }
 const { lang, slug } = Astro.props;
@@ -11,7 +10,7 @@ const other = OTHER[lang];
 <header class="site-header">
   <div class="bar">
     <a class="brand" href={path(lang, '')} aria-label={`${t.brand} — home`}>
-      <span class="mono" aria-hidden="true"><Icon name="handinhand" class="brand-mark" /></span>
+      <span class="mono" aria-hidden="true"><img class="brand-img" src={asset('img/rings.png')} alt="" width="34" height="22" /></span>
       <span class="names">{t.brand}</span>
     </a>
 

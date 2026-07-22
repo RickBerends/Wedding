@@ -119,7 +119,11 @@ img, svg { max-width: 100%; }
   display: grid; place-items: center; width: 2.4rem; height: 2.4rem;
   border: 1.5px solid var(--line); border-radius: 50%;
 }
-.brand-mark { width: 1.55rem; height: 1.55rem; color: var(--ink); }
+.brand-img { width: 1.75rem; height: auto; display: block; }
+/* pure black line-art on transparent → flip to light on the midnight theme */
+@media (prefers-color-scheme: dark) { .brand-img { filter: invert(1); } }
+:root[data-theme="dark"] .brand-img { filter: invert(1); }
+:root[data-theme="light"] .brand-img { filter: none; }
 .brand .names { font-family: var(--f-hand); font-weight: 700; letter-spacing: .02em; font-size: .9rem; }
 
 .nav { display: flex; align-items: center; gap: .2rem; flex-wrap: wrap; }
@@ -181,6 +185,19 @@ h1 {
 .datechip {
   display: inline-block; margin-top: 1rem; border: 1.5px dashed var(--line); border-radius: 999px;
   padding: .35rem 1rem; font-weight: 700; letter-spacing: .04em; font-size: .82rem;
+}
+/* home hero: weekday small + handwritten above, the date big below, same dotted outline */
+.datechip-stack {
+  display: inline-flex; flex-direction: column; align-items: center; gap: .05rem;
+  border-radius: 18px; padding: .55rem 1.6rem;
+}
+.datechip-stack .dow {
+  font-family: var(--f-hand); font-style: italic; font-weight: 700; font-size: .82rem;
+  letter-spacing: .01em; color: var(--ink-soft); transform: rotate(-4deg);
+}
+.datechip-stack .dd {
+  font-family: var(--f-display); font-weight: 900; font-size: var(--step-2);
+  letter-spacing: .02em; line-height: 1;
 }
 .tagline { margin-top: 1.5rem; font-family: var(--f-hand); font-style: italic; font-size: var(--step-1); color: var(--ink-soft); }
 .home-hero .art { width: min(28rem, 78%); margin: 2rem auto 0; color: var(--ink); }
@@ -349,6 +366,8 @@ h1 {
 }
 .transport-note .contact { margin: 1rem 0 0; }
 .transport-note .contact a { font-weight: 700; text-underline-offset: 3px; }
+.call-line { display: block; margin-top: .2rem; }
+.call-line a { font-weight: 700; text-underline-offset: 3px; }
 
 .links-grid {
   display: grid; gap: 1rem; margin: 1.4rem auto 0; max-width: 52rem;

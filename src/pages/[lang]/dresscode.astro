@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Illustration from '../../components/Illustration.astro';
+import { content, LOCALES } from '../../content/i18n.js';
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = content[lang];
+const dc = t.dresscode;
+---
+<BaseLayout lang={lang} slug="dresscode" title={dc.title}>
+  <section class="wrap page-hero">
+    <p class="eyebrow">{t.brand}</p>
+    <Illustration src="img/ducks.jpg" alt="Two ducks dressed up, toasting under a disco ball" class="page-art" />
+    <h1>{dc.title}</h1>
+    <p class="quote">“{dc.quote}”</p>
+  </section>
+  <section class="wrap">
+    <div class="callout">
+      <p>{dc.note}</p>
+    </div>
+  </section>
+</BaseLayout>
